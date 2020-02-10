@@ -1,8 +1,9 @@
-def compare_output(file_1 , file_2):
-    file1=open(file_1,'r')
-    file2=open(file_2,'r')
+## To compare code_output to sample_outputs
+def compare_output(file_1_name , file_2_name):
+    file1 = open(file_1_name,'r')
+    file2 = open(file_2_name,'r')
     i=0
-    print ("\n\nFor ",file_1,' and  ',file_2,' :')
+    print ("\n\nFor ",file_1_name,' and  ',file_2_name,' :')
     for line1,line2 in zip(file1,file2):
         if(line1.strip() == line2.strip()):
             print(i+1,": Pass")
@@ -18,7 +19,7 @@ def generate_matrix(method):
     matrix_width = 100
     no_targets = 50
 
-    file = open('last_matrix.txt','w+')
+    file = open('test_matrix.txt','w+')
 
     # Print tree method
     k = method + "\n"
@@ -48,6 +49,8 @@ def generate_matrix(method):
     file.close()
 
 
-""" To use the above functions 
+""" 
+To use the above functions 
 1. compare_output('file_to_compare' , 'destination_from_where_to_compare')
 2. make_matrix("type_name_of_method_here:A*/UCS/BFS")
+"""
